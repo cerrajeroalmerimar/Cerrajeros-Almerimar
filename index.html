@@ -674,6 +674,71 @@
     .header-cta span { display: none; }
     .header-cta svg { margin: 0; }
   }
+  /* DROPDOWN MENU STYLES */
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-right: 32px;
+  }
+  .nav-item {
+    position: relative;
+    padding: 10px 0;
+  }
+  .nav-link {
+    color: var(--white);
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .nav-link:hover { color: var(--gold); }
+  .nav-link svg { width: 14px; height: 14px; fill: currentColor; transition: transform 0.3s; }
+  .nav-item:hover .nav-link svg { transform: rotate(180deg); }
+
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.1);
+    min-width: 280px;
+    padding: 12px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: var(--shadow-strong);
+    z-index: 110;
+  }
+  .nav-item:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+  .dropdown-link {
+    display: block;
+    padding: 12px 24px;
+    color: rgba(255,255,255,0.7);
+    font-size: 14px;
+    transition: all 0.3s;
+    border-left: 2px solid transparent;
+  }
+  .dropdown-link:hover {
+    background: rgba(255,255,255,0.05);
+    color: var(--gold);
+    border-left-color: var(--gold);
+    padding-left: 28px;
+  }
+
+  @media (max-width: 900px) {
+    .nav-menu { display: none; }
+  }
+
 </style>
 </head>
 <body>
@@ -761,65 +826,90 @@
         <div class="service-icon">
           <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
         </div>
-        <h3>Apertura de puertas urgente en Almerimar</h3>
-        <p>¿Te has quedado fuera de casa sin llaves o la puerta no abre? Nuestro servicio de apertura de puertas en Almerimar es rápido, sin dañar la cerradura siempre que sea técnicamente posible. Trabajamos en todo tipo de puertas: blindadas, acorazadas, de madera, PVC y aluminio.</p>
-        <a href="apertura-de-puertas-almerimar.html" style="color:var(--navy); font-weight:600; font-size:14px; text-decoration:underline; display:inline-block; margin-top:10px;">Más información sobre aperturas</a>
+        <h3>Apertura de puertas urgente</h3>
+        <p>¿Te has quedado fuera de casa sin llaves o la puerta no abre? Servicio rápido en Almerimar, sin dañar la cerradura. Trabajamos en todo tipo de puertas.</p>
+        <a href="apertura-de-puertas-almerimar.html" style="color:var(--navy); font-weight:600; font-size:14px; text-decoration:underline; display:inline-block; margin-top:10px;">Ver servicio</a>
       </div>
 
       <div class="service-card">
         <div class="service-icon">
           <svg viewBox="0 0 24 24"><path d="M12.65 10C11.83 7.67 9.61 6 7 6c-3.31 0-6 2.69-6 6s2.69 6 6 6c2.61 0 4.83-1.67 5.65-4H17v4h4v-4h2v-4H12.65zM7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg>
         </div>
-        <h3>Cambio y sustitución de cerraduras</h3>
-        <p>¿Has perdido las llaves? ¿Acabas de mudarte? ¿Te han robado o forzado la cerradura? Cambiamos bombines y cerraduras completas en el mismo día. Instalamos marcas de confianza con la mejor relación calidad-seguridad para tu vivienda o negocio en Almerimar.</p>
+        <h3>Cambio de cerraduras</h3>
+        <p>¿Has perdido las llaves? ¿Acabas de mudarte? Cambiamos bombines y cerraduras completas en el mismo día con la mejor relación calidad-seguridad.</p>
+        <a href="cambio-de-cerraduras-almerimar.html" style="color:var(--navy); font-weight:600; font-size:14px; text-decoration:underline; display:inline-block; margin-top:10px;">Ver servicio</a>
       </div>
 
       <div class="service-card">
         <div class="service-icon">
           <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.08 3.11H5.77L6.85 7zM19 17H5v-5h14v5z"/></svg>
         </div>
-        <h3>Apertura de coches en Almerimar</h3>
-        <p>¿Llaves dentro del coche con el seguro puesto? ¿Mando averiado? Abrimos vehículos de todas las marcas sin dañar la carrocería ni los cristales. Es un problema más frecuente de lo que parece en zonas de veraneo y urbanizaciones, y lo resolvemos en el mismo lugar donde estés.</p>
+        <h3>Cerrajero de coches</h3>
+        <p>Especialistas en cerrajería automotriz en Almerimar. Solucionamos cualquier problema con las llaves o cerraduras de tu vehículo de forma profesional.</p>
+        <a href="cerrajero-de-coches-almerimar.html" style="color:var(--navy); font-weight:600; font-size:14px; text-decoration:underline; display:inline-block; margin-top:10px;">Ver servicio</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v16h10V4H7zm5 11a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm-2-4h4v1h-4v-1zm0 2h4v1h-4v-1z"/></svg>
+        </div>
+        <h3>Copia de llaves de coche</h3>
+        <p>¿Necesitas un duplicado de la llave de tu coche? Realizamos copias de llaves con chip y mandos para la mayoría de marcas y modelos del mercado.</p>
+        <a href="copia-de-llaves-de-coche-almerimar.html" style="color:var(--navy); font-weight:600; font-size:14px; text-decoration:underline; display:inline-block; margin-top:10px;">Ver servicio</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.08 3.11H5.77L6.85 7zM19 17H5v-5h14v5z"/></svg>
+        </div>
+        <h3>Apertura de coches</h3>
+        <p>¿Llaves dentro del coche? Abrimos vehículos de todas las marcas sin dañar la carrocería ni los cristales. Respuesta rápida en Almerimar.</p>
+        <a href="apertura-de-coches-almerimar.html" style="color:var(--navy); font-weight:600; font-size:14px; text-decoration:underline; display:inline-block; margin-top:10px;">Ver servicio</a>
       </div>
 
       <div class="service-card">
         <div class="service-icon">
           <svg viewBox="0 0 24 24"><path d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"/></svg>
         </div>
-        <h3>Urgencias de madrugada</h3>
-        <p>El servicio urgente 24 horas no es solo un eslogan en nuestra página web: es la realidad de nuestro trabajo. Si necesitas un cerrajero a las 2, a las 4 o a las 6 de la mañana en Almerimar, atendemos tu llamada y nos ponemos en marcha. Nadie debería quedarse sin entrar a su casa toda la noche.</p>
+        <h3>Cerrajero urgente 24h</h3>
+        <p>Servicio de guardia 24/7 en Almerimar. Si necesitas un cerrajero de madrugada o en festivo, atendemos tu llamada y nos ponemos en marcha de inmediato.</p>
+        <a href="cerrajero-urgente-almerimar.html" style="color:var(--navy); font-weight:600; font-size:14px; text-decoration:underline; display:inline-block; margin-top:10px;">Ver servicio</a>
       </div>
 
       <div class="service-card">
         <div class="service-icon">
           <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 4l5 2.18V11c0 3.72-2.55 7.16-5 8.32C9.55 18.16 7 14.72 7 11V7.18L12 5z"/></svg>
         </div>
-        <h3>Instalación de bombines de alta seguridad</h3>
-        <p>Si tu cerradura tiene años o es de serie básica, es el momento de mejorarla. Instalamos bombines de alta seguridad con protección antimanipulación, antipicking y antibumping. Una inversión pequeña que marca una diferencia real en la seguridad de tu hogar o negocio.</p>
+        <h3>Bombines de alta seguridad</h3>
+        <p>Mejora la seguridad de tu hogar instalando bombines con protección antibumping, antipicking y antitaladro. Inversión real en tranquilidad.</p>
+        <a href="bombines-de-seguridad-almerimar.html" style="color:var(--navy); font-weight:600; font-size:14px; text-decoration:underline; display:inline-block; margin-top:10px;">Ver servicio</a>
       </div>
 
       <div class="service-card">
         <div class="service-icon">
           <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
         </div>
-        <h3>Duplicado y copia de llaves</h3>
-        <p>Realizamos copias de llaves convencionales y de seguridad. Si tienes llaves de perfil especial o sistema patentado, consúltanos: en muchos casos podemos ayudarte directamente o indicarte el procedimiento correcto sin que tengas que andar perdido de tienda en tienda.</p>
+        <h3>Duplicado de llaves</h3>
+        <p>Realizamos copias de llaves convencionales y de seguridad. Equipamiento de precisión para garantizar que tu copia funcione perfectamente a la primera.</p>
+        <a href="duplicado-de-llaves-almerimar.html" style="color:var(--navy); font-weight:600; font-size:14px; text-decoration:underline; display:inline-block; margin-top:10px;">Ver servicio</a>
       </div>
 
       <div class="service-card">
         <div class="service-icon">
           <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
         </div>
-        <h3>Apertura de buzones, taquillas y cajas fuertes</h3>
-        <p>No solo puertas. También abrimos buzones de correo, taquillas, cajas de seguridad y archivadores con llave perdida o cerradura bloqueada. En comunidades de vecinos y edificios de apartamentos en Almerimar es una consulta habitual que resolvemos sin complicaciones.</p>
+        <h3>Cajas fuertes y buzones</h3>
+        <p>Apertura técnica de cajas fuertes, buzones y taquillas. Si has perdido la llave o la combinación, recuperamos el acceso sin comprometer el contenido.</p>
+        <a href="apertura-de-cajas-fuertes-almerimar.html" style="color:var(--navy); font-weight:600; font-size:14px; text-decoration:underline; display:inline-block; margin-top:10px;">Ver servicio</a>
       </div>
 
       <div class="service-card">
         <div class="service-icon">
           <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
         </div>
-        <h3>Asesoramiento en seguridad para locales y negocios</h3>
-        <p>Si tienes un comercio, restaurante, apartamento turístico u oficina en Almerimar y quieres mejorar la seguridad de acceso, podemos ayudarte. Evaluamos tu situación actual y te recomendamos las soluciones más adecuadas sin venderte lo que no necesitas.</p>
+        <h3>Seguridad para negocios</h3>
+        <p>Asesoramiento y soluciones de seguridad para locales comerciales, oficinas y apartamentos turísticos en Almerimar. Protege lo que más importa.</p>
+        <a href="cerrajeria-para-negocios-almerimar.html" style="color:var(--navy); font-weight:600; font-size:14px; text-decoration:underline; display:inline-block; margin-top:10px;">Ver servicio</a>
       </div>
 
     </div>
