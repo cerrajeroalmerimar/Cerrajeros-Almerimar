@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 96" role="img" aria-labelledby="title desc">
+  <title id="title">Cerrajero Almerimar</title>
+  <desc id="desc">Logo de Cerrajero Almerimar con escudo, llave y silueta de coche.</desc>
+  <defs>
+    <linearGradient id="gold" x1="30" y1="8" x2="88" y2="88" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f0bf6a"/>
+      <stop offset="1" stop-color="#c48631"/>
+    </linearGradient>
+    <linearGradient id="steel" x1="0" y1="0" x2="0" y2="96" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2a353b"/>
+      <stop offset="1" stop-color="#101417"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <path d="M48 6 86 20v27c0 23-15 37-38 45C25 84 10 70 10 47V20L48 6Z" fill="url(#steel)"/>
+    <path d="M48 11 80 23v24c0 19-12 31-32 38-20-7-32-19-32-38V23l32-12Z" fill="#172126" stroke="url(#gold)" stroke-width="3"/>
+    <path d="M33 48c0-8 7-15 15-15s15 7 15 15v14H33V48Z" fill="none" stroke="#f0bf6a" stroke-width="5" stroke-linecap="round"/>
+    <path d="M28 59h40v16H28z" fill="url(#gold)" rx="3"/>
+    <path d="M47 64h4v7h-4z" fill="#101417" rx="1"/>
+    <path d="M61 32c8 1 15 5 19 12l-7 2c-3-4-7-7-12-8v-6Z" fill="#f0bf6a" opacity=".95"/>
+    <path d="M82 62h10m-5-5v10" stroke="#c48631" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(111 24)">
+    <text x="0" y="24" fill="#fffdf8" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="850" letter-spacing="0">Cerrajero</text>
+    <text x="0" y="54" fill="#f0bf6a" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="900" letter-spacing="0">Almerimar</text>
+    <path d="M2 65h146" stroke="#0f6b6f" stroke-width="4" stroke-linecap="round"/>
+    <path d="M162 52c7-11 20-18 36-18h23c8 0 14 4 18 11l8 13h10c5 0 9 4 9 9v6H158v-6c0-8 2-12 4-15Z" fill="#fffdf8"/>
+    <circle cx="184" cy="73" r="8" fill="#f0bf6a"/>
+    <circle cx="238" cy="73" r="8" fill="#f0bf6a"/>
+    <path d="M180 48h45c5 0 8 2 11 6l4 6h-72l4-7c2-3 5-5 8-5Z" fill="#0f6b6f" opacity=".95"/>
+  </g>
+</svg>
